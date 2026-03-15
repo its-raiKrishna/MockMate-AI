@@ -1,0 +1,21 @@
+User opens website
+↓
+Select Interview Type
+↓
+Frontend / Backend / HR / FullStack
+↓
+AI starts interview
+↓
+AI asks question 1
+↓
+User speaks answer
+↓
+AI evaluates answer
+↓
+AI gives feedback
+↓
+Next question
+↓
+Repeat 10 questions
+↓
+Final performance report
