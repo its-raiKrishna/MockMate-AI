@@ -1,69 +1,67 @@
 # MockMate – AI Powered Voice Mock Interview System
 
-MockMate is an AI-powered mock interview platform that simulates real interview environments using voice interaction and artificial intelligence.  
+MockMate is an AI-powered mock interview platform that simulates real interview environments using voice interaction and artificial intelligence.
 
-The system asks interview questions, listens to candidate responses through speech recognition, evaluates answers using AI, and provides feedback to help users improve their interview performance.
+The system asks interview questions, listens to candidate responses through speech recognition, evaluates answers using AI, and provides real-time feedback to improve interview performance.
 
----
+---------------------------------------------------
 
-## Project Overview
+## 🚀 Project Overview
 
-Preparing for technical interviews can be challenging. MockMate provides a realistic interview experience where users can practice answering questions and receive AI-based feedback.
+MockMate provides a realistic interview experience where users can practice answering questions by speaking and receive instant AI-based feedback.
 
 The system acts as an AI interviewer that:
-- asks interview questions
+- asks questions
 - listens to spoken answers
 - evaluates responses using AI
-- provides feedback and performance analysis
+- gives feedback like a real interviewer
 
----
+---------------------------------------------------
 
-## Key Features
+## ✨ Key Features
 
-- AI-generated interview questions
-- Voice-based interview interaction
-- Speech-to-text answer recognition
-- AI evaluation of candidate responses
-- AI voice feedback
-- 10-question interview sessions
-- Multiple interview modes:
-  - Frontend Interview
-  - Backend Interview
-  - HR Interview
-  - Full Stack Interview
-- Real-time AI interaction
-- Clean and modern UI
+- 🎤 Voice-based interview interaction  
+- 🤖 AI-generated interview questions  
+- 🧠 AI evaluation of answers (Gemini API)  
+- 🔊 AI voice feedback (Good / Wrong + explanation)  
+- 🗣️ Speech-to-text answer recognition  
+- 🔐 Login & Register system (UI based)  
+- ⚡ Real-time interaction  
+- 🎨 Clean UI using Tailwind CSS  
+- 🧩 5-question interactive interview session  
 
----
+--------------------------------------------------
 
-## Interview Flow
-User opens website
-↓
-Select interview type
-↓
-AI starts interview
-↓
-AI asks question
-↓
-User speaks answer
-↓
-AI evaluates answer
-↓
-AI gives voice feedback
-↓
-Next question
-↓
-After 5 questions → performance report
+## 🔄 Interview Flow
+- User opens website
+- ↓
+- Login Page
+- ↓
+- Home Page
+- ↓
+- Start Interview
+- ↓
+- AI asks question (voice)
+- ↓
+- User answers using microphone
+- ↓
+- AI evaluates answer
+- ↓
+- AI gives voice feedback
+- ↓
+- Next question
+- ↓
+- After 5 questions → Interview ends
 
----
+---------------------------------------------------
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 ### Frontend
-- EJS
+- EJS (Embedded JavaScript Templates)
 - Tailwind CSS
-- Web Speech API
-- Speech Synthesis API
+- Web Speech API (Speech Recognition)
+- Speech Synthesis API (Text-to-Speech)
 
 ### Backend
 - Node.js
@@ -72,40 +70,65 @@ After 5 questions → performance report
 ### AI Integration
 - Google Gemini API
 
-### Development Tools
-- Git
-- GitHub
+### Tools
+- Git & GitHub
 - VS Code
+
+---------------------------------------------------
+
+## 📁 Project Structure
+- MockMate-AI
+- │
+- ├── backend
+- │ ├── node_modules
+- │ ├── public
+- │ ├── views
+- │ │ ├── index.ejs
+- │ │ ├── interview.ejs
+- │ │ ├── login.ejs
+- │ │ └── register.ejs
+- │ ├── package.json
+- │ ├── package-lock.json
+- │ └── server.js
+- │
+- ├── Flow.txt
+- ├── .gitignore
+- └── README.md
+
+-------------------------------------------------
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+git clone https://github.com/its-raiKrishna/MockMate-AI.git
+
+
+
 
 ---
 
-## Project Structure
-MockMate-AI
-│
-├── backend
-│   ├── node_modules
-│   ├── public
-│   ├── views
-│   │   ├── index.ejs
-│   │   └── interview.ejs
-│   ├── package.json
-│   ├── package-lock.json
-│   └── server.js
-│
-├── database
-├── frontend
-├── Flow.txt
-├── .gitignore
-└── README.md
+## 🔮 Future Improvements
 
-## Team Members
+- Resume-based interview questions  
+- Evaluation of Marks
+- More interview categories (Frontend, Backend,  HR, etc.)  
+- AI interviewer personality  
+- Improved UI and animations  
+- Authentication with sessions  
+
+---
+
+## 👨‍💻 Team Members
+
 - Krishna Rai – Backend Development & AI Integration  
 - Sambana Chandra Shekhar – Frontend Development & UI Design  
-- Shubham Kumar – Frontend Support & Testing  
+- Shubham Kumar – Testing & Deployment  
 
 B.Tech Students  
 GLA University, Mathura
 
-## License
+---
+
+## 📜 License
 
 This project is developed for educational and academic purposes.
