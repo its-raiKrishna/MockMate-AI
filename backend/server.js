@@ -1,19 +1,18 @@
 const express = require("express");
+require("dotenv").config();
+
+const authRoutes = require("./routes/authRoutes");
+const interviewRoutes = require("./routes/interviewRoutes");
 
 const app = express();
 
 app.set("view engine", "ejs");
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.render("index");
-});
+app.use("/", authRoutes);
+app.use("/", interviewRoutes);
 
-app.get("/interview", (req, res) => {
-    res.render("interview");
-});
-
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
-});
+app.listen(8000, () => console.log("Running on port 8000"));

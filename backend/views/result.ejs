@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white flex justify-center items-center h-screen">
+
+    <div class="bg-gray-800 p-8 rounded-xl text-center shadow-xl">
+
+        <h1 class="text-3xl mb-6">🎉 Interview Results</h1>
+
+        <p class="text-xl mb-2">Score: <%= result.score %> / <%= result.total %></p>
+
+        <p class="text-lg mb-4">
+            Percentage: <%= ((result.score/result.total)*100).toFixed(2) %>%
+        </p>
+
+        <a href="/home">
+            <button class="bg-indigo-600 px-6 py-2 rounded hover:bg-indigo-500">
+                Go Home
+            </button>
+        </a>
+
+    </div>
+
+</body>
+</html>
