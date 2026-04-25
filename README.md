@@ -124,6 +124,8 @@ git clone https://github.com/its-raiKrishna/MockMate-AI.git
 - Sambana Chandra Shekhar – Frontend Development & UI Design  
 - Shubham Kumar – Testing & Deployment  
 
+B.Tech Students  
+GLA University, Mathura
 
 ---
 
