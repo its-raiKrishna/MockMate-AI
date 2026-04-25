@@ -77,23 +77,23 @@ The system acts as an AI interviewer that:
 ---------------------------------------------------
 
 ## 📁 Project Structure
--MockMate-AI/
--│
--├── config/
--├── controllers/
--├── routes/
--├── views/
--│ ├── index.ejs
--│ ├── interview.ejs
--│ ├── login.ejs
--│ ├── register.ejs
--│ └── result.ejs
--│
--├── public/
--├── server.js
--├── package.json
--├── .gitignore
--└── README.md
+MockMate-AI/
+│
+├── config/
+├── controllers/
+├── routes/
+├── views/
+│ ├── index.ejs
+│ ├── interview.ejs
+│ ├── login.ejs
+│ ├── register.ejs
+│ └── result.ejs
+│
+├── public/
+├── server.js
+├── package.json
+├── .gitignore
+└── README.md
 
 -------------------------------------------------
 
