@@ -15,4 +15,8 @@ app.use(express.static("public"));
 app.use("/", authRoutes);
 app.use("/", interviewRoutes);
 
-app.listen(8000, () => console.log("Running on port 8000"));
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+    console.log(`Running on port ${PORT}`);
+});
