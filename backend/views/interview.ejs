@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Mock Interview</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
@@ -12,176 +13,161 @@
 
         <h1 class="text-3xl mb-4">Mock Interview</h1>
 
-        <!-- Question -->
         <p id="question" class="mb-4 text-lg"></p>
 
-        <!-- Answer -->
         <p id="answer" class="text-yellow-400 mb-4"></p>
 
-        <!-- Speak Button -->
-        <button onclick="startListening()"
-            class="bg-green-500 px-4 py-2 rounded w-full mb-2 hover:bg-green-600">
+        <button onclick="startListening()" class="bg-green-500 px-4 py-2 rounded w-full mb-2 hover:bg-green-600">
             🎤 Speak Answer
         </button>
 
-        <!-- Next Button -->
-        <button onclick="nextQuestion()"
-            class="bg-blue-500 px-4 py-2 rounded w-full mb-2 hover:bg-blue-600">
+        <button onclick="nextQuestion()" class="bg-blue-500 px-4 py-2 rounded w-full mb-2 hover:bg-blue-600">
             ➡️ Next Question
         </button>
 
-        <!-- Quit Button -->
-        <button onclick="quitInterview()"
-            class="bg-red-600 px-4 py-2 rounded w-full hover:bg-red-700">
+
+        <button onclick="quitInterview()" class="bg-red-600 px-4 py-2 rounded w-full hover:bg-red-700">
             ❌ Quit Interview
         </button>
 
-        <!-- Status -->
         <p id="status" class="mt-3 text-sm whitespace-pre-line"></p>
 
     </div>
 
-<script>
+    <script>
 
-// Questions Data
-let data = [
-    {
-        question: "What is HTML?",
-        keyword: "markup",
-        correct: "HTML is a markup language used to structure web pages.",
-        explanation: "HTML is used to create structure like headings, paragraphs, links."
-    },
-    {
-        question: "What is CSS?",
-        keyword: "style",
-        correct: "CSS is used to style web pages.",
-        explanation: "CSS controls colors, layouts and design."
-    },
-    {
-        question: "What is JavaScript?",
-        keyword: "interactive",
-        correct: "JavaScript makes websites interactive.",
-        explanation: "It adds buttons, forms, animations."
-    },
-    {
-        question: "What is Node.js?",
-        keyword: "server",
-        correct: "Node.js runs JavaScript on server.",
-        explanation: "Used for backend development."
-    },
-    {
-        question: "What is an API?",
-        keyword: "communication",
-        correct: "API allows communication between systems.",
-        explanation: "Apps use API to exchange data."
-    }
-];
+        let data = [
+            {
+                question: "What is HTML?",
+                keyword: "markup",
+                correct: "HTML is a markup language used to structure web pages.",
+                explanation: "HTML is used to create structure like headings, paragraphs, links."
+            },
+            {
+                question: "What is CSS?",
+                keyword: "style",
+                correct: "CSS is used to style web pages.",
+                explanation: "CSS controls colors, layouts and design."
+            },
+            {
+                question: "What is JavaScript?",
+                keyword: "interactive",
+                correct: "JavaScript makes websites interactive.",
+                explanation: "It adds buttons, forms, animations."
+            },
+            {
+                question: "What is Node.js?",
+                keyword: "server",
+                correct: "Node.js runs JavaScript on server.",
+                explanation: "Used for backend development."
+            },
+            {
+                question: "What is an API?",
+                keyword: "communication",
+                correct: "API allows communication between systems.",
+                explanation: "Apps use API to exchange data."
+            }
+        ];
 
-let index = 0;
+        let index = 0;
 
-// 🔊 Speak function
-function speak(text) {
-    window.speechSynthesis.cancel();
-    let speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en-US";
-    window.speechSynthesis.speak(speech);
-}
-
-// Show Question
-function showQuestion() {
-    document.getElementById("question").innerText = data[index].question;
-    document.getElementById("answer").innerText = "";
-    document.getElementById("status").innerText = "";
-
-    speak(data[index].question);
-}
-
-// 🎤 Voice Input
-function startListening() {
-
-    const SpeechRecognition =
-        window.SpeechRecognition ||
-        window.webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-        document.getElementById("status").innerText = "❌ Browser not supported (Use Chrome)";
-        return;
-    }
-
-    const recognition = new SpeechRecognition();
-    recognition.lang = "en-US";
-    recognition.continuous = false;
-    recognition.interimResults = false;
-
-    document.getElementById("status").innerText = "🎤 Listening...";
-
-    recognition.start();
-
-    recognition.onresult = function(event) {
-        let text = event.results[0][0].transcript;
-        document.getElementById("answer").innerText = "You: " + text;
-
-        checkAnswer(text);
-    };
-
-    recognition.onerror = function(event) {
-        console.log("Error:", event.error);
-
-        if (event.error === "not-allowed") {
-            document.getElementById("status").innerText = "❌ Mic permission denied";
-        } 
-        else if (event.error === "no-speech") {
-            document.getElementById("status").innerText = "⚠️ No speech detected, try again";
-        } 
-        else {
-            document.getElementById("status").innerText = "Error: " + event.error;
+        function speak(text) {
+            window.speechSynthesis.cancel();
+            let speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
         }
-    };
-}
 
-// ✅ Check Answer
-function checkAnswer(answer) {
+        function showQuestion() {
+            document.getElementById("question").innerText = data[index].question;
+            document.getElementById("answer").innerText = "";
+            document.getElementById("status").innerText = "";
 
-    let current = data[index];
-    let feedback = "";
+            speak(data[index].question);
+        }
 
-    if (answer.toLowerCase().includes(current.keyword)) {
-        feedback = "✅ Right Answer!\n\n✔ Correct Answer: " + current.correct;
-    } else {
-        feedback = "❌ Wrong Answer!\n\n📘 Explanation: " + current.explanation;
-    }
+        function startListening() {
 
-    document.getElementById("status").innerText = feedback;
+            const SpeechRecognition =
+                window.SpeechRecognition ||
+                window.webkitSpeechRecognition;
 
-    speak(feedback);
-}
+            if (!SpeechRecognition) {
+                document.getElementById("status").innerText = "❌ Browser not supported (Use Chrome)";
+                return;
+            }
 
-// ➡️ Next Question
-function nextQuestion() {
-    index++;
+            const recognition = new SpeechRecognition();
+            recognition.lang = "en-US";
+            recognition.continuous = false;
+            recognition.interimResults = false;
 
-    if (index < data.length) {
+            document.getElementById("status").innerText = "🎤 Listening...";
+
+            recognition.start();
+
+            recognition.onresult = function (event) {
+                let text = event.results[0][0].transcript;
+                document.getElementById("answer").innerText = "You: " + text;
+
+                checkAnswer(text);
+            };
+
+            recognition.onerror = function (event) {
+                console.log("Error:", event.error);
+
+                if (event.error === "not-allowed") {
+                    document.getElementById("status").innerText = "❌ Mic permission denied";
+                }
+                else if (event.error === "no-speech") {
+                    document.getElementById("status").innerText = "⚠️ No speech detected, try again";
+                }
+                else {
+                    document.getElementById("status").innerText = "Error: " + event.error;
+                }
+            };
+        }
+
+        function checkAnswer(answer) {
+
+            let current = data[index];
+            let feedback = "";
+
+            if (answer.toLowerCase().includes(current.keyword)) {
+                feedback = "✅ Right Answer!\n\n✔ Correct Answer: " + current.correct;
+            } else {
+                feedback = "❌ Wrong Answer!\n\n📘 Explanation: " + current.explanation;
+            }
+
+            document.getElementById("status").innerText = feedback;
+
+            speak(feedback);
+        }
+
+        function nextQuestion() {
+            index++;
+
+            if (index < data.length) {
+                showQuestion();
+            } else {
+                document.getElementById("status").innerText = "🎉 Interview Finished!";
+                speak("Interview finished. Good job!");
+            }
+        }
+
+        function quitInterview() {
+            let confirmQuit = confirm("Are you sure you want to quit?");
+
+            if (confirmQuit) {
+                window.speechSynthesis.cancel();
+                window.location.href = "/home";
+            }
+        }
+
         showQuestion();
-    } else {
-        document.getElementById("status").innerText = "🎉 Interview Finished!";
-        speak("Interview finished. Good job!");
-    }
-}
 
-// ❌ Quit
-function quitInterview() {
-    let confirmQuit = confirm("Are you sure you want to quit?");
-    
-    if (confirmQuit) {
-        window.speechSynthesis.cancel();
-        window.location.href = "/home";
-    }
-}
-
-// Start
-showQuestion();
-
-</script>
+    </script>
 
 </body>
+
 </html>
