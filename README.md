@@ -101,11 +101,17 @@ MockMate-AI/
 
 ### 1. Clone the repository
 git clone https://github.com/its-raiKrishna/MockMate-AI.git
+-------------------------------------------------------------
+# MockMate-AI
 
+🔗 Live Demo: https://mockmate-ai-0lvr.onrender.com
 
+## Features
+- Login page
+- Register page
+- Backend deployed on Render
 
-
----
+--------------------------------------------------------------------------
 
 ## 🔮 Future Improvements
 
