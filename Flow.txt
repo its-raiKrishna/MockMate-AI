@@ -16,6 +16,6 @@ AI gives feedback
 ↓
 Next question
 ↓
-Repeat 10 questions
+Repeat 5 questions
 ↓
 Final performance report

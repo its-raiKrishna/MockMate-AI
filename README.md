@@ -105,18 +105,19 @@ git clone https://github.com/its-raiKrishna/MockMate-AI.git
 
 
 
----
+------------------------------------------------------------------------
 
 ## 🔮 Future Improvements
 
 - Resume-based interview questions  
 - Evaluation of Marks
-- More interview categories (Frontend, Backend,  HR, etc.)  
+- More interview categories (Frontend, Backend,  HR, Coding round etc.)  
 - AI interviewer personality  
 - Improved UI and animations  
-- Authentication with sessions  
+- Authentication with sessions
+- Result section for your improvement  
 
----
+------------------------------------------------------------------------
 
 ## 👨‍💻 Team Members
 
@@ -127,7 +128,7 @@ git clone https://github.com/its-raiKrishna/MockMate-AI.git
 B.Tech Students  
 GLA University, Mathura
 
----
+---------------------------------------------------------------------
 
 ## 📜 License
 

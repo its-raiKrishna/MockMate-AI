@@ -3,7 +3,7 @@ const router = express.Router();
 
 const auth = require("../controllers/authController");
 
-// ✅ FIX: root route
+
 router.get("/", (req, res) => {
     res.redirect("/login");
 });
