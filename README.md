@@ -1,146 +1,188 @@
-# MockMate – AI Powered Voice Mock Interview System
+# 🎤 MockMate – AI Powered Voice Mock Interview System
 
-MockMate is an AI-powered mock interview platform that simulates real interview environments using voice interaction and artificial intelligence.
+MockMate is an AI-powered mock interview platform designed to simulate real-world interview environments using voice interaction and artificial intelligence. It helps users practice interviews, improve communication skills, and receive instant AI-driven feedback.
 
-The system asks interview questions, listens to candidate responses through speech recognition, evaluates answers using AI, and provides real-time feedback to improve interview performance.
-
----------------------------------------------------
+---
 
 ## 🚀 Project Overview
 
-MockMate provides a realistic interview experience where users can practice answering questions by speaking and receive instant AI-based feedback.
+MockMate acts as a virtual interviewer that interacts with users through voice. It asks interview questions, listens to spoken answers, evaluates them using AI, and provides real-time feedback.
 
-The system acts as an AI interviewer that:
-- asks questions
-- listens to spoken answers
-- evaluates responses using AI
-- gives feedback like a real interviewer
+This platform is especially useful for students and job seekers who want to:
 
----------------------------------------------------
+* Practice interviews in a realistic environment
+* Improve speaking and answering skills
+* Gain confidence before real interviews
+
+---
 
 ## ✨ Key Features
 
-- 🎤 Voice-based interview interaction  
-- 🤖 AI-generated interview questions  
-- 🧠 AI evaluation of answers (Gemini API)  
-- 🔊 AI voice feedback (Good / Wrong + explanation)  
-- 🗣️ Speech-to-text answer recognition  
-- 🔐 Login & Register system (UI based)  
-- ⚡ Real-time interaction  
-- 🎨 Clean UI using Tailwind CSS  
-- 🧩 5-question interactive interview session  
+* 🎤 **Voice-Based Interaction** – Answer questions using your microphone
+* 🤖 **AI-Generated Questions** – Dynamic interview questions powered by AI
+* 🧠 **Smart Answer Evaluation** – Uses Gemini API to analyze responses
+* 🔊 **Voice Feedback System** – AI responds with correctness + explanation
+* 🗣️ **Speech Recognition** – Converts spoken answers into text
+* 🔐 **Authentication System** – Login & Register UI
+* ⚡ **Real-Time Processing** – Instant feedback after each answer
+* 🎨 **Modern UI** – Clean and responsive design using Tailwind CSS
+* 🧩 **Structured Interview Flow** – 5-question session per interview
 
---------------------------------------------------
+---
 
 ## 🔄 Interview Flow
-- User opens website
-- ↓
-- Login Page
-- ↓
-- Home Page
-- ↓
-- Start Interview
-- ↓
-- AI asks question (voice)
-- ↓
-- User answers using microphone
-- ↓
-- AI evaluates answer
-- ↓
-- AI gives voice feedback
-- ↓
-- Next question
-- ↓
-- After 5 questions → Interview ends
 
----------------------------------------------------
+1. User opens the application
+2. User logs in or registers
+3. User navigates to Home Page
+4. User starts the interview
+5. AI asks a question (via voice)
+6. User answers using microphone
+7. AI evaluates the response
+8. AI gives voice feedback
+9. Process repeats for 5 questions
+10. Interview session ends
+
+---
 
 ## 🛠️ Technologies Used
 
-### Frontend
-- EJS (Embedded JavaScript Templates)
-- Tailwind CSS
-- Web Speech API (Speech Recognition)
-- Speech Synthesis API (Text-to-Speech)
+### 🔹 Frontend
 
-### Backend
-- Node.js
-- Express.js
+* EJS (Embedded JavaScript Templates)
+* Tailwind CSS
+* Web Speech API (Speech Recognition)
+* Speech Synthesis API (Text-to-Speech)
 
-### AI Integration
-- Google Gemini API
+### 🔹 Backend
 
-### Tools
-- Git & GitHub
-- VS Code
+* Node.js
+* Express.js
 
----------------------------------------------------
+### 🔹 AI Integration
+
+* Google Gemini API
+
+### 🔹 Tools & Platforms
+
+* Git & GitHub
+* VS Code
+* Render (Deployment)
+
+---
+
+## 🌐 Live Demo
+
+👉 https://mockmate-ai-0lvr.onrender.com
+
+---
 
 ## 📁 Project Structure
+
+```
 MockMate-AI/
 │
-├── config/
-├── controllers/
-├── routes/
-├── views/
-│ ├── index.ejs
-│ ├── interview.ejs
-│ ├── login.ejs
-│ ├── register.ejs
-│ └── result.ejs
+├── config/              # Configuration files
+├── controllers/         # Business logic
+├── routes/              # Route handling
+├── views/               # EJS templates
+│   ├── index.ejs
+│   ├── interview.ejs
+│   ├── login.ejs
+│   ├── register.ejs
+│   └── result.ejs
 │
-├── public/
-├── server.js
-├── package.json
+├── public/              # Static assets (CSS, JS)
+├── backend/             # Backend logic & APIs
+├── server.js            # Main server file
+├── package.json         # Dependencies
 ├── .gitignore
 └── README.md
+```
 
--------------------------------------------------
+---
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/its-raiKrishna/MockMate-AI.git
--------------------------------------------------------------
-# MockMate-AI
+cd MockMate-AI
+```
 
-🔗 Live Demo: https://mockmate-ai-0lvr.onrender.com
+---
 
-## Features
-- Login page
-- Register page
-- Backend deployed on Render
+### 2️⃣ Navigate to backend
 
-<<<<<<< HEAD
+```bash
+cd backend
+```
 
-------------------------------------------------------------------------
-=======
---------------------------------------------------------------------------
->>>>>>> 4df2723e143e04100e891b992dde89eaae8459f5
+---
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 4️⃣ Start the server
+
+```bash
+npm start
+```
+
+or
+
+```bash
+npm run dev
+```
+
+---
+
+### 5️⃣ Open in browser
+
+```
+http://localhost:8000
+```
+
+---
 
 ## 🔮 Future Improvements
 
-- Resume-based interview questions  
-- Evaluation of Marks
-- More interview categories (Frontend, Backend,  HR, Coding round etc.)  
-- AI interviewer personality  
-- Improved UI and animations  
-- Authentication with sessions
-- Result section for your improvement  
+* 📄 Resume-based interview questions
+* 📊 Score & performance evaluation system
+* 💼 Multiple interview categories (Frontend, Backend, HR, Coding)
+* 🧑‍💼 AI interviewer personalities
+* 🎨 Improved UI/UX with animations
+* 🔐 Secure authentication (sessions & JWT)
+* 📈 Detailed result & analytics dashboard
 
-------------------------------------------------------------------------
+---
 
 ## 👨‍💻 Team Members
 
-- Krishna Rai – Backend Development & AI Integration  
-- Sambana Chandra Shekhar – Frontend Development & UI Design  
-- Shubham Kumar – Testing & Deployment  
+* **Krishna Rai** – Backend Development & AI Integration
+* **Sambana Chandra Shekhar** – Frontend Development & UI Design
+* **Shubham Kumar** – Testing & Deployment
 
-B.Tech Students  
+📍 B.Tech Students
 GLA University, Mathura
 
----------------------------------------------------------------------
+---
 
 ## 📜 License
 
-This project is developed for educational and academic purposes.
+This project is developed for educational and academic purposes only.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+
+

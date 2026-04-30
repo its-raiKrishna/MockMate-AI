@@ -18,16 +18,16 @@
         <p id="answer" class="text-yellow-400 mb-4"></p>
 
         <button onclick="startListening()" class="bg-green-500 px-4 py-2 rounded w-full mb-2 hover:bg-green-600">
-            🎤 Speak Answer
+            Speak Answer
         </button>
 
         <button onclick="nextQuestion()" class="bg-blue-500 px-4 py-2 rounded w-full mb-2 hover:bg-blue-600">
-            ➡️ Next Question
+             Next Question
         </button>
 
 
         <button onclick="quitInterview()" class="bg-red-600 px-4 py-2 rounded w-full hover:bg-red-700">
-            ❌ Quit Interview
+             Quit Interview
         </button>
 
         <p id="status" class="mt-3 text-sm whitespace-pre-line"></p>
@@ -93,7 +93,7 @@
                 window.webkitSpeechRecognition;
 
             if (!SpeechRecognition) {
-                document.getElementById("status").innerText = "❌ Browser not supported (Use Chrome)";
+                document.getElementById("status").innerText = "Browser not supported (Use Chrome)";
                 return;
             }
 
@@ -102,7 +102,7 @@
             recognition.continuous = false;
             recognition.interimResults = false;
 
-            document.getElementById("status").innerText = "🎤 Listening...";
+            document.getElementById("status").innerText = "Listening...";
 
             recognition.start();
 
@@ -117,10 +117,10 @@
                 console.log("Error:", event.error);
 
                 if (event.error === "not-allowed") {
-                    document.getElementById("status").innerText = "❌ Mic permission denied";
+                    document.getElementById("status").innerText = "Mic permission denied";
                 }
                 else if (event.error === "no-speech") {
-                    document.getElementById("status").innerText = "⚠️ No speech detected, try again";
+                    document.getElementById("status").innerText = "No speech detected, try again";
                 }
                 else {
                     document.getElementById("status").innerText = "Error: " + event.error;
@@ -134,9 +134,9 @@
             let feedback = "";
 
             if (answer.toLowerCase().includes(current.keyword)) {
-                feedback = "✅ Right Answer!\n\n✔ Correct Answer: " + current.correct;
+                feedback = "Right Answer!\n\n✔ Correct Answer: " + current.correct;
             } else {
-                feedback = "❌ Wrong Answer!\n\n📘 Explanation: " + current.explanation;
+                feedback = "Wrong Answer!\n\n Explanation: " + current.explanation;
             }
 
             document.getElementById("status").innerText = feedback;
